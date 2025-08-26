@@ -47,6 +47,12 @@ export default function MovieDrinkingGame() {
     audio.play().catch(e => console.log('Audio play failed:', e));
   };
 
+  const handleRuleClick = (rule: string) => {
+    if (isListening) {
+      triggerDrink(rule);
+    }
+  };
+
   const toggleListening = () => {
     setIsListening(!isListening);
   };
@@ -90,10 +96,16 @@ export default function MovieDrinkingGame() {
         {isListening && selectedMovie && (
           <>
             <div className="mb-4">
-              <h2 className="text-xl mb-2">Take a drink when:</h2>
+              <h2 className="text-xl mb-2">Click when these happen:</h2>
               <ul className="list-disc pl-5">
                 {movieRules[selectedMovie as keyof typeof movieRules].map((rule, index) => (
-                  <li key={index} className="mb-1">{rule}</li>
+                  <li 
+                    key={index} 
+                    className="mb-1 cursor-pointer hover:text-yellow-400"
+                    onClick={() => handleRuleClick(rule)}
+                  >
+                    {rule}
+                  </li>
                 ))}
               </ul>
             </div>
