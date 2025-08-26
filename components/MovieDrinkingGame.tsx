@@ -9,6 +9,9 @@ export default function MovieDrinkingGame() {
   const [lastTrigger, setLastTrigger] = useState('');
   const [selectedMovie, setSelectedMovie] = useState('');
 
+  // Updated description to clarify manual clicking
+  const description = "Click on rules manually when they happen in the movie - no automatic detection";
+
   const movieRules = {
     "The Big Lebowski": [
       "The Dude says 'man'",
@@ -116,6 +119,7 @@ export default function MovieDrinkingGame() {
         }}
       >
         <h1 className="text-2xl font-bold mb-4">Movie Drinking Game</h1>
+        <p className="text-sm text-gray-400 mb-4">{description}</p>
         
         <div className="mb-6">
           <select 
