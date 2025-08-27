@@ -9,7 +9,6 @@ export default function MovieDrinkingGame() {
   const [lastTrigger, setLastTrigger] = useState('');
   const [selectedMovie, setSelectedMovie] = useState('');
 
-  // Updated description to clarify manual clicking
   const description = "Click on rules manually when they happen in the movie - no automatic detection";
 
   const movieRules = {
@@ -33,55 +32,6 @@ export default function MovieDrinkingGame() {
       "Hermione corrects someone",
       "Snape looks suspicious",
       "Harry's scar hurts"
-    ],
-    "Star Wars": [
-      "Someone says 'The Force'",
-      "A lightsaber is ignited",
-      "Someone has a bad feeling about this",
-      "R2-D2 beeps",
-      "The Dark Side is mentioned"
-    ],
-    "The Room": [
-      "Someone says 'Oh hi'",
-      "Tommy Wiseau laughs",
-      "Someone throws a football",
-      "Lisa causes drama",
-      "Someone says 'You're tearing me apart'"
-    ],
-    "Jurassic Park": [
-      "Someone says 'dinosaur'",
-      "T-Rex appears",
-      "Velociraptors hunt",
-      "Someone runs from a dinosaur",
-      "Life finds a way is referenced"
-    ],
-    "The Princess Bride": [
-      "Inconceivable!",
-      "As you wish",
-      "My name is Inigo Montoya...",
-      "True love is mentioned",
-      "Someone says 'marriage'"
-    ],
-    "Pulp Fiction": [
-      "Someone swears",
-      "A briefcase appears",
-      "Someone eats a burger",
-      "Dance scene happens",
-      "Biblical quote is mentioned"
-    ],
-    "Monty Python and the Holy Grail": [
-      "Ni!",
-      "Someone mentions a swallow",
-      "Tis but a scratch",
-      "Someone clops coconuts",
-      "Someone says 'witch'"
-    ],
-    "The Matrix": [
-      "Someone takes a pill",
-      "Bullet time effect",
-      "Someone enters the Matrix",
-      "Agent Smith appears",
-      "Someone dodges bullets"
     ]
   };
 
